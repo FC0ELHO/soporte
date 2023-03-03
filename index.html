@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>tips - Importantes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/all/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styleFc.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+</head>
+
+    
+    <!-- Menu NavBar -->                                             
+    <nav id="inicio" class="navbar navbar-expand flex-column flex-md-row fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Tips - Soporte</a>
+                </div>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Enlaces</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">SQL</a>                          
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Entregas</a>
+                            <a class="dropdown-item" href="#">Atlas</a>
+                            <a class="dropdown-item" href="#TbCo">PropertyConcept</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reportes</a>
+                    </li>
+                    <li class="dropdown nav nav-pills">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Web</a>                          
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#"> 1</a>
+                            <a class="dropdown-item" href="#"> 2 </a>
+                            <a class="dropdown-item" href="#"> 3 </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FrRa">Firmas Rapidas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!-- Menu NavBar -->
+
+
+
+<body class="d-flex flex-column">
+    
+    <main class="col-md-9 col-xl-12 py-md-5 pl-md-3 bd-content" role="main">
+            <div class="col-8"><p></p> </div>
+            <div class="col-4"><p></p>  </div>
+ 
+    <div class="container">
+        <div class="row justify-content-start float-xl-none">
+            <h5>Linck de Interes</h5>
+            <p class="col-6"> <abbr title="Pagina para generar codigos QR" class="initialism"><a href="https://www.qrcode.es/es/generador-qr-code/" target="_black"> https://www.qrcode.es/es/generador-qr-code/ </a></abbr> </p>
+            <p class="col-6"> <abbr title="Descargar APP directo desde produccion" class="initialism"><code> https://www.cupsfnetreps.com/laboratorio/apks/sfnetreps.apk </code></abbr></p>
+            <p class="col-6"> <abbr title="Pagina para descargar iOS y Android" class="initialism"><code> https://qa.cupsfnetreps.com/laboratorio/apks/sfnetreps.html </code></abbr></p>
+            <p class="col-5"> <abbr title="Para Apuntar a un QA, recuerda colocar el laboratorio" class="initialism"><a href="http://arbue1ws76.cupar2.local/" target="_black"> http://arbue1ws76.cupar2.local/Laboratorio </a></abbr> </p>   
+        </div>
+    </div>
+    
+    <!-- Encabezados mas usados -->
+    <div class="container">
+        <h5 id="EnSP">Encabezados para entregas</h5>
+        <div class="row justify-content-between">
+            <div class="col-sm-6 border border-info">
+                <h4>Create o Update en SP</h4><code>
+                /*&lt;ScriptManager type="PROCEDURE" name="NOMBRE_PROCEDURE"/&gt;*/<br>IF(OBJECT_ID('@@PROCEDURE') IS NOT NULL)<br>BEGIN<br>DROP PROCEDURE [dbo].[@@PROCEDURE]<br>END<br>GO<br>CREATE         PROCEDURE [dbo].[@@PROCEDURE]</code>
+            </div>
+        <div class="col-sm-5 border border-info">
+            <h4>Update o Delete de un Dato</h4><code>
+            /*&lt;ScriptManager type="DATA" name="NOMBRE_TABLA" /&gt;*/<br>--UPDATE OR DELETE</code>
+        </div>
+    </div>
+    <!-- Fin-->
+    <!-- Otros encabezados -->
+    <div class="container">
+        <div class="pos-f-t">
+            <nav class="navbar navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="Stp" class="navbar-toggler-icon"> </span>Otros Encabezados
+                </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="p-5 bg-light">
+                    <span class="text-muted">
+                        <div class="row justify-content-between">
+                            <div class="col-sm-6 border border-secondary rounded-bottom">
+                            <h4>Create o Update en Vistas</h4><code>
+                                /*&lt;ScriptManager type="VIEW" name="NOMBRE_VIEW"/&gt;*/<br> IF (OBJECT_ID('@@VIEW') IS NOT NULL)<br>BEGIN<br>DROP VIEW [dbo].[@@VIEW]<br>END<br>GO<br>CREATE VIEW [dbo].[@@VIEW]</code>                
+                            </div>
+                            <div class="col-sm-6 border">
+                            <h4>Agregar Columnas</h4><code>
+                                /*&lt;ScriptManager type="TABLE" name="NOMBRE_TABLA"/&gt;*/<br>AGREGAR UNA COLUMNA A UNA TABLA:<br>IF COL_LENGTH('@@NOMBRETABLA','@@NOMBRECOLUMNA') IS NULL<br>BEGIN<br>ALTER TABLE @@NOMBRETABLA<br>ADD @@NOMBRECOLUMNA INT NULL<br>END</code>
+                            </div>
+                            <div class="col-sm-6 border">
+                            <h4>Create o Update en Funciones</h4><code>
+                                /*&lt;ScriptManager type="FUNCTION" name="NOMBRE_FUNCTION"/&gt;*/<br>IF(OBJECT_ID('@@FUNCTION') IS NOT NULL)<br>BEGIN<br>DROP FUNCTION [dbo].[@@FUNCTION ]<br>END<br>GO<br>CREATE FUNCTION [dbo].[@@FUNCTION]</code>
+                            </div>
+                            <div class="col-sm-6 border border-secondary rounded-left">
+                            <h4>Nueva Tabla</h4><code>
+                                /*&lt;ScriptManager type="TABLE" name="NOMBRE_TABLA" /&gt;*/<br>IF(OBJECT_ID('@@TABLA') IS NOT NULL)<br>BEGIN<br>DROP TABLE [dbo].[@@TABLA]<br>END<br>GO<br>CREATE TABLE [dbo].[@@TABLA]</code>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin -->
+    <div class="row">
+            <div class="col-8"><p></p> </div>
+            <div class="col-4"><p></p>  </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-between">
+            <h5 id="TbCo">Grupos dentro de PropertyConcept</h5>
+            <p> 
+                Esta es la tabla principal <span class="p-1 alert-dark alert"><code>select * from propertyConceptScope</code></span>
+                Cada objeto, esta modelado por capas, dichas capas se almacenan en tablas, tendriamos estonces, que cada
+                grupo sedria cada parte del layout.
+
+                PropertyGroup: Aqui van las carectaristicas de un grupo. <br>
+                <span class="p-1 alert-dark alert"><code data-toggle="modal" data-target="#propertyGroup">select * from propertyGroup where description = ' '</code></span>            </p>
+            <!-- Modal -->
+            <div class="modal fade" id="propertyGroup" tabindex="-1" role="dialog" aria-labelledby="propertyGroupLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyGroupLabel">Imagen de que hace el Select </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/propertyGroup.png" alt="propertyGroup" class="img-thumbnail ">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="propertyGroup" tabindex="-1" role="dialog" aria-labelledby="propertyGroupLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="propertyGroupLabel">Imagen de que hace el Select </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="img/propertyConcept.png" alt="propertyOption" class="img-thumbnail">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fin de modales -->
+        <p class="text-justify"> propertyConcept: Esta tiene que opciones van dentro de el grupo, que se relaciona</p>
+            <span class="alert alert-dark" role="alert">
+                <code data-toggle="modal" data-target="#propertyGroup"> select * from propertyConcept <span> where
+                        propertyGroupCode = X </span> </code>
+            </span> 
+           <p> siendo que el campo propertyGroupCode, se realaciona con la tabla PropertyGroup y el campo legacyCode.</p>
+        
+        <div class="card float" style="width: 36rem;">
+            <img src="img/propertyOption.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">luego colcare la inforacion junto a la imagen </p>
+            </div>
+        </div>
+        <p class="text-justify"> propertyOption: Esta tiene que opciones van dentro de el grupo, que se relaciona <code>
+                select * from propertyOption <span> where propertyConceptCode = X </span> </code>
+            siendo que el campo propertyGroupCode, se realaciona con la tabla PropertyGroup y el campo legacyCode.
+            <div>
+                <img src="img/propertyOption.png" alt="propertyOption" class="img-thumbnail">
+            </div>
+        </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8"><p></p> </div>
+        <div class="col-4"><p></p>  </div>
+    </div>
+        <div class="row">
+            <h4 id="AgFl">Agregar un Filtro</h4>            
+            <p class="text-justify">
+
+                primero busco cual laboratorio lo tiene
+                despues comparar los entitis
+
+                por ejemplo el de Las carteras de medicos filtrar por direccion
+
+                seria en /entities el archivo RelMedicListByApm.crud dentro de ese archivo busco el componente que quiero
+                agregar.
+                NOta: el crud tiene para secciones:
+
+                DataReader esta se encarga de cargar parametros que estan por el modelado
+                DataSource es el que nos indica los Procedures que estan en ese entititi, o los que se usaran.
+                Parameter no es dificil saber que son los parametros del Procedure
+                ConnectionString el estrin de la coneccion que en este caso es ReadEagel
+                Colums aqui es donde esta enmaquetado la inforamcion que nos mostrara el siti web. tendra varias column con
+                visible = "true" o "False"
+                ItemAction es la action que realizara al moento de darle clip
+
+
+                QuickFilterDef
+                esto son los filtros</p>
+                <code> StaticComboItem en este buscare el Label="del que quiero cambiar o agregar " </code>
+                en esta linea tambien esta <code>="@@addressFilter" </code> <p> ese @@ es el parametro que necesitamos para poder
+                activar el filtro, es decir, ese @@ se utiliza para extraer el srtin
+                y colocarlo en el Procedure.
+
+                ya al encontrar el filtro que buscamos, lo copiamos y lo colocamos en el laboratorio que lo solucito, luego
+                buscamos el procedure que que
+                que esta en el inicio a ver que parametros usa
+
+                Nota;
+                Carmbiar las 3 vistas. Admin, Apm (representante) y Jefe.
+
+                Si queremos ver la tabla de los filtros</p>
+                <code> select * from filterConditionWeb </code>
+                <p>seguimos con el ejemplo de direccion</p>
+                <code> select * from filterConditionWeb where filterName like '%@@addressFilter%' </code>
+
+                <p>al ver en que estatus esta este procedure, vamos a la web y realizamos las pruebas.si no esta activo lo actualizamos
+                <code> UPDATE filterConditionWeb SET status= 'A' WHERE code </code> Seguimos con el ejemplo de direccion:</p>
+                <div class="alert alert-dark col-md-9 col-xl-12 py-md-5 pl-md-3 bd-content" role="alert"> 
+                <pre><code>
+                UPDATE filterConditionWeb SET status= 'A' WHERE code = (select code from filterConditionWeb where
+                    filterName like '%@@addressFilter%') </code></pre></div>
+                con este puede ver todos los cambios realizados en la base de DataSource
+                Si tiene @@texto, toma todo el valor pero si tiene @tex tomo simplemente el resultado
+                <code>select * from _dbVersionLog </code>
+
+                <p>Con esto puedo ver los problemas de la Firma, Habes data</p>
+            <div class="col-md-9 col-xl-12 py-md-5 pl-md-3 bd-content alert alert-dark" role="alert"> 
+                    <pre><code>
+        -- CONSULTA SQL
+                insert into legalAdvisory (actionTypeCode,signature, description, [order], includeDate,status)
+                values (10, '1|0|0|1','Esperando notificaciones del cliente Tecnoquimica CO', 0, GETDATE(),'A' )
+                select * from legalAdvisory
+                SELECT 1/0
+                COMMIT TRAN
+                SET XACT_ABORT OFF
+
+                use TcnCo_Data
+                select * from legalAdvisory
+                use XnpCo_Data
+                select * from legalAdvisory
+
+                truncate table legalAdvisory
+                    </code></pre></div>
+        </div>
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row">
+            <h4 id="Cont">Contador de Visitas en Mobile</h4>
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target=".modalimgejemplo">Ver Ejemplo</button>
+            <div class="modal fade modalimgejemplo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl" role="document">
+                    <div class="modal-content">
+                    <img src="img/mobile/contadorMobile.png" alt="Ejemplo" class="rounded-sm rounded">
+                    </div>
+                </div>
+            </div>
+            <div >
+            <p class="text-justify">Cuando nos nos solicitan cambiar un contador en la vista de los dispositivos. 
+            esto es RelPharmacyList, Tenemos que buscar la palabra contador en los archivos los <span class="text-info">RelxxxList.js</span> que se encunetran en la <span class="text-info">laboratorio_mobile\js\PageDefinition</span> del los <span class="text-info">RelxxxList.js</span>, y agregar esta linea, con la que podremos apuntar esa sentencia al periodo actual, <code>(SELECT  code FROM period  WHERE DATETIME('NOW', 'localtime') BETWEEN Datestart AND DateEnd)</code></p>
+            <div class="col-md-9 col-xl-12 py-md-5 pl-md-3 bd-content alert alert-dark" role="alert">
+                
+            <pre><code>
+return "select *,(select CAST(count(*) AS TEXT) || ' / ' || CAST(visitFrequency as TEXT) 
+from action inner join period on action.periodcode=period.code 
+where relationCode = cusPharmacyGridView.relationCode and actionType = 2 and 
+period.code=(SELECT  code FROM period  WHERE DATETIME('NOW', 'localtime') BETWEEN Datestart AND DateEnd)) as conteo 
+from cusPharmacyGridView "+ ((localRelationVar.code)? ("WHERE relationCode=" + localRelationVar.code) :"");
+            </code></pre></div> 
+        <p>esto es RelMedic</p>
+        <div class="col-md-9 col-xl-12 py-md-5 pl-md-3 bd-content alert alert-dark" role="alert">
+            <pre><code>                            
+return " SELECT *,(select '[' || GROUP_CONCAT('{\"week\": '|| rr.week ||',\"day\": '|| rr.day ||'}') || ']' 
+from relationRoute rr where rr.status=0 AND rr.relationcode=CarterasView.relationCode) [relationRoute], 
+(select CAST(count(*) AS TEXT) || ' / ' || CAST(visitFrequency as TEXT) 
+from action where relationCode = CarterasView.relationCode and actionType = 1) as conteo  
+FROM CarterasView " + ((localRelationVar.code)? ("WHERE relationCode=" + localRelationVar.code) :"");
+            </code></pre></div>
+            <p>Se puede colocar directo en el el archivo <code> RelPharmacyList </code> que esta en esta direccion <code> Y:\laboratoreiomobile\js\PageDefinition  </code></p>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-8"><p></p></div>
+        <div class="col-4"><p></p></div>
+    </div>               
+
+    <div class="row">
+        <h4 id="Rpt">Para poder modificar los reportes (los filtros de los reportes)</h4>
+        <p>Se modifica en: <code> Y:\nombrede laboratorio\Js\Controllers\WebReport.js </code> el Labopratorio que lo tiene listo es <code> Y:\PrcCo\Js\Controllers\WebReport.js </code>
+            se tiene que comentar simplemente eso </p>
+            <div class="col-md-9 col-xl-12 py-md-5 pl-md-3 bd-content alert alert-dark" role="alert">
+                <pre>
+                <code>
+                    } else if (userType == "2") { //District
+                        if (typeof (Selector_Get("MainData_Region")) != 'undefined')
+                            Selector_Get("MainData_Region").disable();
+                        if (typeof (Selector_Get("MainData_Region1")) != 'undefined')
+                            Selector_Get("MainData_Region1").disable();
+                        if (typeof (ComboList_Get("MainData_RegionHierarchyType")) != 'undefined')
+                            ComboList_Get("MainData_RegionHierarchyType").Disable();
+                    //  if (typeof (Selector_Get("MainData_District")) != 'undefined')    <-------- eso ahi
+                    //      Selector_Get("MainData_District").disable();                   <-------- eso ahi
+                    } else if (userType == "4") { //Region
+                        if (typeof (Selector_Get("MainData_Region")) != 'undefined')
+                            Selector_Get("MainData_Region").disable();
+                </code></pre>
+            </div>
+    </div>                    
+    <div class="row">
+        <h4 id="MBFl">Filtros del Mobile</h4>
+            <h4>Para modificar el filtro de las semanas en la mobile colocamos el alias, por ejemplo </h4>
+        <div class="alert alert-dark" role="alert">
+            <code>
+                field: 'EXISTS(SELECT * FROM relationRoute rr WHERE rr.day = @@value@@ AND rr.relationCode = rv.relationCode)',
+            </code>
+        </div>
+            <p>En la sentencia anterior cambiar <code> AND rr.relationCode = relGeneritView.relationCode)'</code> ,<span> y cambio a </span><code> rv.relationCode </code> </p>
+    </div>
+
+  
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4"></div>
+    </div>
+    <!--Agregar Regiones en el Atlas-->
+    <div class="row">
+        <h4 id="Atlas"> Atlas y direccion </h4>
+            <div class="container">
+                <p class="text-justify">
+                    Para agregar una region en el <abbr title="Listado de regiones" class="initialism" data-toggle="modal" data-target=".modalimgeAtlas">Altlas</abbr>, tendromos que comunicarnbos con la persona que abrio el incidente, para saber como quedara la relacion que agregaremos. En la base de datos del laboratorio, tenemos una tabla llamda <code>atlas</code>, en donde podremos ver todas las relaciones, tambien tenemos 3 tablas, que es en donde agregariamos la region, ciudad, provincia, pueblo, lo que nos esten solicitando. La tabla B <code>county</code>, que se realaciona se realciona con el campo <code>stateCode</code> de la tabla A <code>state</code> , que es la tabla donde esta la region principal, y la table C <code>town</code> que se relaciona por el campo <code>countyCode</code>. 
+                    <div class="modal fade modalimgeAtlas" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                            <img src="img/atlas.jpg" alt="Atlas" class="rounded-sm rounded">
+                            </div>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <h6> Podemos utilizar este codigo, para agregar una region que depende de una </h6>
+            <div class="alert alert-dark" role="alert">
+                <pre>   <code>
+/*&lt;ScriptManager type="DATA" name="COUNTY" />*/
+
+insert into county (stateCode,legacyCode, description,GeoX,GeoY,status,legacyCode2) 
+   values (codigodeciudad,(SELECT ISNULL(MAX(legacyCode) + 1, 0) FROM county),'Nombredelagregado',null,null,'A',null)
+
+
+declare @countyCode int = scope_identity()  -- Con esto obtenemos el ultimo id creado con ese scrip y esa conexion. 
+
+insert into town (legacyCode,description,countyCode,GeoX,GeoY,status) 
+   values ((SELECT ISNULL(MAX(legacyCode) + 1, 0) FROM town),'NOmbre delarelaciondelcrado',@countyCode,null,null,'A')
+                </code></pre>
+            </div>
+
+    </div>
+        <h4>Para poder solucionar este error en Geo en el mobile</h4>
+                puedo utilizar este codigo 
+            <div class="alert alert-dark" role="alert">
+                 <code>    
+                /*&lt;ScriptManager type="DATA" name="parameter" />*/
+
+                        --UPDATE
+
+                        UPDATE parameter
+                        SET paramValue = 0
+                            WHERE paramName = 'GEO_ENABLE'
+            </code>
+    </div>
+        
+            <div>
+                <img src="img/errorGeomobile.png" alt="">
+            </div>
+            
+    <div>
+    
+    </div>
+    <!-- Fin-->
+    
+    <!--Firmas rapidas-->
+    <div class="container">
+        <h4 id="FrRa">Firmas para mantis</h4>
+        <div class="row justify-content-between">
+            <div class="col-sm-6 border border-info"><h5>Entragas</h5><code>            
+                <p>Reciba un cordial saludo.</p>Por favor autorizar la implementacion en el Ambiente de QA, Para que pueda ser colocados los archivos que estan en la siguiente ruta.<br>&lt;u> <br> Rutra de entrega <br>&lt;/u><br><br>Muchas gracias<br><br>&lt;strong> Francisco  &lt;/strong></code>
+            </div>            
+            <div class="col-sm-5 border border-info"><h5>Revisar</h5><code>
+                <p>Reciba un cordial saludo.</p><p>Por favor, realizar las pruebas necesarias referente al inconveniente presentado. <br> En caso de que este  todo correctamente, dar el OK para implementacion, y puedan colocar los archivos en Productivo.</p>Gracias de antemano.<br><br>&lt;strong>Francisco&lt;/strong></code>
+                
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-sm-6 border border-info"><h5>Informando pases </h5><code>            
+                <p>Reciba un cordial saludo.</p>Por favor autorizar la incidendia relacionada, para que pueda ser implemantada en el ambiente correspondiente.<br><br><br>Muchas gracias<br><br>&lt;strong> Francisco  &lt;/strong></code>
+            </div>            
+            <div class="col-sm-5 border border-info"><h5>Cerrar</h5><code>
+                <p>Reciba un cordial saludo.</p><p>Por favor, realizar las pruebas necesarias referente al inconveniente presentado. <br> En caso de que este   correctamente, cerrar el incidente.</p>Gracias de antemano.<br><br>&lt;strong>Francisco&lt;/strong></code>
+            </div>
+        </div>
+        Reciba un cordial saludo.
+
+        Por favor, dar el OK en el incidente relacionado, para que pueda ser implementado.
+        
+        Gracias de antemano.
+        
+        <strong> Francisco </strong>
+
+
+
+
+    </div>    
+    <!--Fin-->
+    <div class="row">
+        <div class="col-8"><br> </div>
+        <div class="col-4"><br> </div>
+    </div>
+    <!-- Compilar -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <h4>Paso a paso para compilar</h4>
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="img/compilar/conectar.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="text-body">Conectarnos a la VPN de Solutica</h5>
+                <p class="text-body">Despues de un as modificaciones que realizaron de Solutica, para poder compilar hay que conectarse a  la VPN para ingresar al Janckis.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="img/compilar/Jenkins.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5 class="text-body">Ingresamos a la Web de Janckis</h5>
+                <p class="text-body">Utilizando el Siguiente Enlace <a href="http://solsrv07.solutica:8080/me/my-views/view/" target="_black">ir</a>.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="img/compilar/mivista.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(238, 237, 237, 0.938);">
+                <h5 class="text-body">Al ingresar buscamos el Laboratorio</h5>
+                <p class="text-body">Tomando en cuaenta que debemos tener el Tranck para poder ejecutar estas copilaciones</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="img/compilar/dbversion.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block" style="background-color: rgba(238, 237, 237, 0.938);">
+                <h5 class="text-body">Buscamos la version mas receinte</h5>
+                <p class="text-body">Vamos a la tabla Data del laboratorio y ejecutamos <code>select * from _Net_ClientApplicationVersion  </code><br>Luego copiamos los cuatro digitos para poder colocarlos y ejecutar la compilacion </p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="img/compilar/ejecutar.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block"  style="background-color: rgba(238, 237, 237, 0.938);">
+                <h5 class="text-body">Buscamos la version mas receinte</h5>
+                <p  class="text-body">Vamos a la tabla Data del laboratorio y ejecutamos <code>select * from _Net_ClientApplicationVersion  </code><br>Luego copiamos los cuatro digitos para poder colocarlos y ejecutar la compilacion </p>
+            </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="fas fa-chevron-left fa-2x" style="color: blue;" ></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <i class="fas fa-chevron-right fa-2x" style="color: blue;"></i>
+            <span class="sr-only">Next</span> 
+        </a>
+    </div>
+    <!-- fin-->
+    
+
+</div>
+
+</main>
+</div>
+<div class="fixed-bottom text-right"><a class="fas fa-chevron-circle-up fa-2x" href="#" style="text-decoration-line: none;"></a></div>
+    <!-- Footer -->
+    <footer id="sticky-footer" class="py-4 text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Francisco Coelho</small>
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script src="js/javascripFc.js"></script>
+    
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+    
+
+</body>
+
+</html>
